@@ -1,6 +1,7 @@
 package com.example.admir.criminalintent;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ public class CrimeLab {
 
     public static CrimeLab get(Context context) {
         if (sCrimeLab == null) {
-            return new CrimeLab(context);
+            sCrimeLab = new CrimeLab(context);
         }
         return sCrimeLab;
     }
